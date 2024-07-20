@@ -25,7 +25,7 @@ function TopBar() {
     <SwiperSlide key={index} className="flex justify-center items-center">
       <Link to="/contact-us">
         <div className="h-full flex justify-center items-center w-[80%] m-auto">
-          <h2 className="text-secondary flex flex-row">{item.title}</h2>
+          <h3 className="text-secondary flex flex-row flex-nowrap py-1">{item.title}</h3>
         </div>
       </Link>
     </SwiperSlide>

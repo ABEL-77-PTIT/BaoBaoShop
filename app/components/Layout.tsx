@@ -6,7 +6,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative">
       {/* welcome */}
-      <section className="top-bar sticky top-0 bg-primary opacity-70">
+      <section className="top-bar sticky top-0 bg-primary opacity-80">
         <TopBar />
       </section>
 

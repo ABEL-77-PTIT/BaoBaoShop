@@ -4,3 +4,7 @@
 @import './variables';
 @import './reset';
 @import './../components/common/Drawer/styles.scss';
+
+.font__heading {
+  font-size: var(--fs-2);
+}

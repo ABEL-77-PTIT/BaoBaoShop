@@ -1,23 +1,32 @@
 import { Iconable } from '~/types'
 
-function Close(props: Iconable) {
+export default function Hamburger(props: Iconable) {
   return (
     <svg width={40} height={40} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line
-        x1="13.5156"
-        y1="25.5858"
-        x2="25.1075"
-        y2="13.9939"
+        x1="11.75"
+        y1={13}
+        x2="28.1434"
+        y2={13}
         stroke="#9D7853"
         strokeWidth={2}
         strokeLinecap="round"
         {...props}
       />
       <line
-        x1="13.9298"
-        y1={14}
-        x2="25.5217"
-        y2="25.5918"
+        x1="11.75"
+        y1={19}
+        x2="28.1434"
+        y2={19}
+        stroke="#9D7853"
+        strokeWidth={2}
+        strokeLinecap="round"
+      />
+      <line
+        x1="11.75"
+        y1={25}
+        x2="28.1434"
+        y2={25}
         stroke="#9D7853"
         strokeWidth={2}
         strokeLinecap="round"
@@ -25,5 +34,3 @@ function Close(props: Iconable) {
     </svg>
   )
 }
-
-export default Close

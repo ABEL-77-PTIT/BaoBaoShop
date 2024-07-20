@@ -345,3 +345,7 @@ body {
 .drawer-active .drawer-close-button {
   display: block;
 }
+
+.font__heading {
+  font-size: var(--fs-2);
+}
