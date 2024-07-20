@@ -81,7 +81,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-primary text-secondary">
         <Layout {...outletContext}>
           <Outlet context={outletContext} />
         </Layout>

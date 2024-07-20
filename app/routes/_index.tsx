@@ -14,8 +14,6 @@ export const loader = async ({ params, request, context }: LoaderFunctionArgs) =
 export default function Index() {
   const data = useLoaderData<typeof loader>()
 
-  console.log('Home page', data)
-
   return (
     <div className="font-sans p-4">
       <HomePage />

@@ -31,8 +31,6 @@ function HomePage() {
           Show something
         </button>
       </div>
-      <Button>Click now</Button>
-      <div className="h-[1000px]">Content</div>
 
       {showModal && (
         <Modal

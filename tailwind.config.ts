@@ -5,10 +5,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        black: '#252525',
-        primary: '#008080',
-        primary_hover: '#319f9f',
-        secondary: '#ED1847',
+        primary: '#251615',
+        primary_hover: '#251615',
+        secondary: '#9D7853',
+        third: '#715b3e',
+        button: '#008080',
         success: '#28a745',
         warning: '#ffc107',
         info: '#99C4E2',

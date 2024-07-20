@@ -78,7 +78,7 @@ function Modal(props: ModalProps) {
               </span>
             </div>
             <div className="flex justify-between items-center md:px-6">
-              <span className="font-bold text-lg">{heading || 'Confirm modal'}</span>
+              <span className="font-bold text-lg text-secondary">{heading || 'Confirm modal'}</span>
               <button
                 onClick={() => {
                   if (screen !== 'mobile') handleCloseModal()
@@ -119,11 +119,11 @@ function Modal(props: ModalProps) {
                 heightChildren ? heightChildren : 'h-[200px]'
               } max-h-[510px] md:h-fit flex flex-col justify-center items-center`}
             >
-              {showLine && <div className="hidden md:block w-full h-[1px] bg-[#BCBCBC]"></div>}
+              {showLine && <div className="hidden md:block w-full h-[1px] bg-secondary"></div>}
               <div className="overflow-auto w-full py-6 md:py-2 px-6 xxxxl:px-[32px]">
                 {children}
               </div>
-              {showLine && <div className="hidden md:block w-full h-[1px] bg-[#BCBCBC]"></div>}
+              {showLine && <div className="hidden md:block w-full h-[1px] bg-secondary"></div>}
             </div>
           )}
           {(secondaryButton || primaryButton) && (
