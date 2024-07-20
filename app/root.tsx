@@ -6,6 +6,7 @@ import {
   ScrollRestoration,
   json,
   useMatches,
+  useNavigation,
   useRouteError,
 } from '@remix-run/react'
 import './styles/tailwind.css'
@@ -29,6 +30,8 @@ export async function loader() {
 }
 
 export default function App() {
+  const navigation = useNavigation()
+
   const [notify, setNotify] = useState<NotifyProps>({
     message: '',
     status: 'default',
@@ -61,6 +64,7 @@ export default function App() {
     name: 'Abel',
     notify,
     setNotify,
+    navigation,
   }
 
   const onCloseNotify = useCallback(
