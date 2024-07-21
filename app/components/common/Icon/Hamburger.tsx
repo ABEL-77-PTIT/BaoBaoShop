@@ -1,6 +1,6 @@
 import { Iconable } from '~/types'
 
-export default function Hamburger(props: Iconable) {
+function Hamburger(props: Iconable) {
   return (
     <svg width={40} height={40} viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line
@@ -34,3 +34,5 @@ export default function Hamburger(props: Iconable) {
     </svg>
   )
 }
+
+export default Hamburger

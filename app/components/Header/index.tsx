@@ -1,7 +1,22 @@
 import { Link } from '@remix-run/react'
-import Hamburger from '../common/Icon/hamburger'
 import { useState } from 'react'
 import Close from '../common/Icon/Close'
+import Hamburger from '../common/Icon/Hamburger'
+
+const MENU: { title: string; url: string }[] = [
+  {
+    title: 'Trang chủ',
+    url: '/',
+  },
+  {
+    title: 'Thực đơn',
+    url: '/menu',
+  },
+  {
+    title: 'Liên hệ',
+    url: '/contact-us',
+  },
+]
 
 function Header() {
   const [showNav, setShowNav] = useState(true)
@@ -15,15 +30,15 @@ function Header() {
           </h1>
           <nav className="bb__menu hidden lg:flex relative align-middle h-full w-auto">
             <ul className="flex justify-center items-center gap-10 flex-nowrap">
-              <Link to="/">
-                <span className="font__heading font-bold uppercase my-5 mx-10">Trang chủ</span>
-              </Link>
-              <Link to="/menu">
-                <span className="font__heading font-bold uppercase my-5 mx-10">Thực đơn</span>
-              </Link>
-              <Link to="/contact-us">
-                <span className="font__heading font-bold uppercase my-5 mx-10">Liên hệ</span>
-              </Link>
+              {MENU.map((item: { title: string; url: string }, index: number) => (
+                <Link key={index} to={item.url} className="">
+                  <span
+                    className={`font__heading font-bold uppercase my-5 mx-10 pb-1 ${window.location.pathname === item.url ? 'border-b-2 border-secondary' : 'link__hover'}`}
+                  >
+                    {item.title}
+                  </span>
+                </Link>
+              ))}
             </ul>
           </nav>
           <div
