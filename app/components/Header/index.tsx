@@ -61,9 +61,10 @@ function Header(props: any) {
         </div>
       </div>
       <nav
+        id="bb__nav__mobile"
         className={`bb__nav__mobile bg-primary block lg:hidden animate-fadeIn ${showNav ? 'block ' : 'hidden overflow-hidden '}`}
       >
-        <ul className="min-h-40 flex flex-col justify-between items-center gap-4 flex-nowrap">
+        <ul className="h-[245px] flex flex-col justify-between items-center gap-4 flex-nowrap">
           {MENU.map((item: { title: string; url: string }, index: number) => (
             <Link key={index} to={item.url} className="">
               <div

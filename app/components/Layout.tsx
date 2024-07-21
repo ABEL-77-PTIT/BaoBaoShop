@@ -7,7 +7,7 @@ function Layout(props: any) {
   return (
     <div className="relative">
       {/* welcome */}
-      <section className="top-bar sticky top-0 bg-primary opacity-80">
+      <section className="top-bar sticky top-0 left-0 z-10 bg-primary opacity-80">
         <TopBar />
       </section>
 
@@ -15,7 +15,9 @@ function Layout(props: any) {
         <Header {...props} />
       </section>
 
-      <section className={`${showNav ? '-mt-40' : 'mt-0'} lg:mt-0`}>{children}</section>
+      <section className={`main__content ${showNav ? '-mt-[245px]' : 'mt-0'} lg:mt-0`}>
+        {children}
+      </section>
 
       <div className="h-[1000px]">content</div>
 

@@ -1,63 +1,37 @@
-import { useOutletContext } from '@remix-run/react'
-import { useState } from 'react'
-import Button from '~/components/common/Button'
-import Drawer from '~/components/common/Drawer'
-import Modal from '~/components/common/Modal'
-import { NotifyProps } from '~/types'
+import { Link } from '@remix-run/react'
+import { Image } from '@unpic/react'
+import { heroBanner, heroBannerMobile } from '~/assets/images'
 
 function HomePage() {
-  const [showModal, setShowModal] = useState<boolean>(false)
-  const { setNotify: notify } = useOutletContext<any>()
-
-  const handleShowNotify = ({ message, status }: NotifyProps) => {
-    notify({ message, status })
-  }
-
   return (
-    <div>
-      <div className="flex flex-col gap-[20px]">
-        <button onClick={() => setShowModal(true)}>Show Modal</button>
-        <button onClick={() => handleShowNotify({ message: 'Successfully', status: 'success' })}>
-          Show notify
-        </button>
-        <button
-          onClick={() => {
-            document.body.classList.add('drawer-active')
-          }}
-        >
-          Show Drawer
-        </button>
-        <button onClick={() => handleShowNotify({ message: 'Nothing here', status: 'warning' })}>
-          Show something
-        </button>
+    <section>
+      <div className="section-hero-banner layout-boxed relative">
+        <Link prefetch="intent" to="/menu" className="wrapper">
+          <picture className="bg-gray-100 relative pt-[93.33%] md:pt-[39.27%] block">
+            <source media="(max-width: 767px)" srcSet={heroBannerMobile} />
+            <source media="(min-width: 768px) and (max-width: 1023px)" srcSet={heroBanner} />
+            <source media="(min-width: 1024px)" srcSet={heroBanner} />
+            <Image
+              className="banner-desktop object-cover absolute w-full h-full top-0"
+              src={heroBanner}
+              alt="Banner"
+              layout="fullWidth"
+              priority
+              unstyled
+              background="auto"
+              decoding="async"
+            />
+          </picture>
+        </Link>
+        <div className="absolute flex justify-center items-center w-fit min-h-[65px] left-[50%] -translate-x-[50%] bottom-[8%] border-2 border-[#FFF] rounded-full">
+          <Link prefetch="intent" to="/menu">
+            <span className="flex-nowrap font-heading text-[22px] font-bold text-[#FFF] py-2 px-5">
+              Thực đơn hôm nay có gì
+            </span>
+          </Link>
+        </div>
       </div>
-
-      {showModal && (
-        <Modal
-          heading="Confirmation"
-          setShowModal={setShowModal}
-          primaryButton={
-            <button className="h-[46px]" onClick={() => setShowModal(false)}>
-              Done
-            </button>
-          }
-        >
-          <div className="flex flex-col gap-2">
-            <p className="text-base xxl:text-lg font-bold mb-4">
-              It looks like you have denied access to your location. To enable location access,
-              please follow these steps:
-            </p>
-            <ol className="text-sm xxl:text-base font-normal flex flex-col gap-[6px] pl-8">
-              <li className="list-disc">Open your browser`s settings.</li>
-              <li className="list-disc">Find the option for location access.</li>
-              <li className="list-disc">Allow location access for our website.</li>
-            </ol>
-          </div>
-        </Modal>
-      )}
-
-      <Drawer heading="Something">Content ben trong na ba con</Drawer>
-    </div>
+    </section>
   )
 }
 
