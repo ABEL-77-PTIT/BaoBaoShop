@@ -28,7 +28,7 @@ function Header(props: any) {
       <div className="container w-full h-full text-center z-[1] my-3">
         <div className="h-full flex justify-between items-center">
           <h1 className="bb__logo text-secondary">
-            <Link to="/">APT2</Link>
+            <Link to="/">BaoBaopm</Link>
           </h1>
           <nav className="bb__nav__menu hidden lg:flex align-middle h-full w-auto">
             <ul className="flex justify-center items-center gap-10 flex-nowrap">

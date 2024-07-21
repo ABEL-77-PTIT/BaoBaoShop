@@ -53,6 +53,11 @@ function HomePage() {
           </div>
         </div>
       </div>
+
+      {/* Testimonial */}
+      <div className="bb_testimonial pt-20 flex flex-col gap-4 lg:gap-6 items-center">
+        testimonial
+      </div>
     </section>
   )
 }

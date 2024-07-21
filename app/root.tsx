@@ -20,6 +20,7 @@ import { useCallback, useEffect, useState } from 'react'
 import getScrollBarWidth from './helper/getScrollBarWidth'
 import ScrollToTop from './components/ScrollToTop'
 import MoreActions from './components/MoreActions'
+import { logo } from '~/assets/images'
 
 export function shouldRevalidate() {
   return false
@@ -27,6 +28,10 @@ export function shouldRevalidate() {
 
 export async function loader() {
   return json({ name: 'abel' })
+}
+
+export function links() {
+  return [{ rel: 'icon', type: 'image/svg+xml', href: logo }]
 }
 
 export default function App() {
