@@ -43,6 +43,15 @@ export default {
       heading: 'var(--font-family-heading)',
       body: 'var(--font-family-body)',
     },
+    keyframes: {
+      fadeIn: {
+        '0%': { opacity: '0' },
+        '100%': { opacity: '1' },
+      },
+    },
+    animation: {
+      fadeIn: 'fadeIn 0.3s ease-in-out',
+    },
   },
   safelist: ['sm:w-1/2', 'sm:w-1/3', 'sm:w-1/4', 'md:w-1/4', 'lg:w-1/6', 'lg:w-1/4'],
   plugins: [],

@@ -2,7 +2,8 @@ import Footer from './Footer'
 import Header from './Header'
 import TopBar from './TopBar'
 
-function Layout({ children }: { children: React.ReactNode }) {
+function Layout(props: any) {
+  const { children, showNav } = props
   return (
     <div className="relative">
       {/* welcome */}
@@ -11,10 +12,10 @@ function Layout({ children }: { children: React.ReactNode }) {
       </section>
 
       <section>
-        <Header />
+        <Header {...props} />
       </section>
 
-      <section>{children}</section>
+      <section className={`${showNav ? '-mt-40' : 'mt-0'} lg:mt-0`}>{children}</section>
 
       <div className="h-[1000px]">content</div>
 

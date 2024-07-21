@@ -37,6 +37,7 @@ export default function App() {
     status: 'default',
     onClose: () => {},
   })
+  const [showNav, setShowNav] = useState<boolean>(false)
 
   useEffect(() => {
     /**
@@ -65,6 +66,8 @@ export default function App() {
     notify,
     setNotify,
     navigation,
+    showNav,
+    setShowNav,
   }
 
   const onCloseNotify = useCallback(
