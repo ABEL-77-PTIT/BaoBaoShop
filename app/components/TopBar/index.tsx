@@ -1,13 +1,13 @@
 import { useMemo } from 'react'
-import Carousel from '../common/Carousel'
-import { SwiperSlide } from 'swiper/react'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import { Link } from '@remix-run/react'
+import { Autoplay } from 'swiper/modules'
 
 const TOP_BAR = [
   { title: 'Tiệm nước nhà Bảo Bảo' },
   { title: 'Tiệm nước nhà làm' },
-  { title: 'Khai trương ngày 30/07/2024' },
-  { title: 'Địa chỉ là ...' },
+  { title: 'Khai trương ngày 21/06/2024 âm lịch' },
+  { title: 'Địa chỉ là 142 Trần Phú - TT Phù Mỹ' },
 ]
 
 function TopBar() {
@@ -24,7 +24,7 @@ function TopBar() {
   const dataItems = TOP_BAR.map((item: { title: string }, index: number) => (
     <SwiperSlide key={index} className="flex justify-center items-center">
       <Link to="/contact-us">
-        <div className="h-full flex justify-center items-center w-[80%] m-auto">
+        <div className="h-full flex justify-center items-center m-auto">
           <h3 className="text-secondary flex flex-row flex-nowrap py-1">{item.title}</h3>
         </div>
       </Link>
@@ -34,14 +34,9 @@ function TopBar() {
   return (
     <div className="border-b border-third">
       <div className="container font-bold text-base py-1 lg:uppercase lg:text-sm lg:py-1.5">
-        <Carousel
-          data={dataItems}
-          breakpoints={resp}
-          onAutoplayStart={true}
-          navigation
-          autoplay={{ delay: 2000 }}
-          className="h-auto"
-        />
+        <Swiper modules={[Autoplay]} navigation breakpoints={resp} autoplay={{ delay: 2000 }}>
+          {dataItems}
+        </Swiper>
       </div>
     </div>
   )
