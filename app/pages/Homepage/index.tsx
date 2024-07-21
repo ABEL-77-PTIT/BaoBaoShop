@@ -23,11 +23,11 @@ function HomePage() {
             />
           </picture>
         </Link>
-        <div className="absolute flex justify-center items-center w-fit min-h-[65px] left-[50%] -translate-x-[50%] bottom-[8%] border-2 border-[#FFF] rounded-full">
+        <div className="absolute flex justify-center items-center min-w-[300px] lg:min-w-[450px] min-h-12 lg:min-h-[65px] left-[50%] -translate-x-[50%] bottom-[8%] border-2 border-[#FFF] rounded-full">
           <Link prefetch="intent" to="/menu">
-            <span className="flex-nowrap font-heading text-[22px] font-bold text-[#FFF] py-2 px-5">
+            <p className="flex-nowrap w-full font-heading text-[22px] lg:text-[28px] font-bold text-[#FFF] py-0 lg:py-2 px-5">
               Thực đơn hôm nay có gì
-            </span>
+            </p>
           </Link>
         </div>
       </div>
