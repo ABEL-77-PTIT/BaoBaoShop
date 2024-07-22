@@ -1,7 +1,6 @@
 import { Link } from '@remix-run/react'
 import Close from '../common/Icon/Close'
 import Hamburger from '../common/Icon/Hamburger'
-import { useState } from 'react'
 
 const MENU: { title: string; url: string }[] = [
   {

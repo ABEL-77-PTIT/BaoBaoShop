@@ -7,7 +7,7 @@ const ScrollToTop = React.memo(() => {
       role="button"
       onKeyDown={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="hidden transition-property: all duration-200 ease-linear cursor-pointer opacity-100 hover:opacity-60 fixed bottom-[100px] left-[20px] z-[20] scroll-to-top w-[40px] h-[40px] bg-primary justify-center items-center rounded-full border-2 border-secondary"
+      className="hidden transition-property: all duration-200 ease-linear cursor-pointer opacity-100 hover:opacity-60 fixed bottom-[40px] left-[20px] z-[20] scroll-to-top w-[40px] h-[40px] bg-primary justify-center items-center rounded-full border-2 border-secondary"
     >
       <span className="svg-element">
         <svg

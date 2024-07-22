@@ -19,7 +19,6 @@ import Notify from './components/common/Notify'
 import { useCallback, useEffect, useState } from 'react'
 import getScrollBarWidth from './helper/getScrollBarWidth'
 import ScrollToTop from './components/ScrollToTop'
-import MoreActions from './components/MoreActions'
 import { logo } from '~/assets/images'
 
 export function shouldRevalidate() {
@@ -101,7 +100,7 @@ export default function App() {
         <Notify {...notify} onClose={onCloseNotify} />
 
         <ScrollToTop />
-        <MoreActions />
+        {/* <MoreActions /> */}
 
         <ScrollRestoration />
         <Scripts />
@@ -138,7 +137,7 @@ export function ErrorBoundary() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-primary text-secondary">
         <Layout>{page}</Layout>
 
         <Scripts />

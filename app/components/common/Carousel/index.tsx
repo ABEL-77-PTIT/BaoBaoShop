@@ -22,7 +22,7 @@ const Carousel = React.memo((props: Objectable) => {
         }}
         className={`${widelayout == 'true' ? '!overflow-visible' : ''} w-full`}
       >
-        <div role="button" className="swiper-navigation slider-controls" tabIndex={0}>
+        <div role="button" className="swiper-navigation slider-controls mx-2 lg:mx-0" tabIndex={0}>
           <button
             type="button"
             className="slider-prev-button js-prev-button swiper-button-prev"

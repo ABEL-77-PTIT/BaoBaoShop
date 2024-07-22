@@ -5,7 +5,7 @@ import TopBar from './TopBar'
 function Layout(props: any) {
   const { children, showNav } = props
   return (
-    <div className="relative">
+    <div className="wrapper relative">
       {/* welcome */}
       <section className="top-bar sticky top-0 left-0 z-10 bg-primary opacity-80">
         <TopBar />

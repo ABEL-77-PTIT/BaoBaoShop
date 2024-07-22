@@ -17,6 +17,7 @@ body {
   font-weight: 400;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   @media (min-width: 992px) {
     -webkit-tap-highlight-color: transparent;
   }
@@ -196,9 +197,33 @@ body {
 }
 
 body {
-  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9d7853;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #715b3e;
 }
 
 .container {
   max-width: 100% !important;
+}
+
+.wrapper {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
 }

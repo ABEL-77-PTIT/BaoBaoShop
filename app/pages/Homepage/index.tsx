@@ -9,9 +9,7 @@ import Heart from '~/components/common/Icon/Heart'
 const TESTIMONIALS = [
   {
     name: 'Chị Bốn',
-    content: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-          been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer
-          took a galley of type and scrambled it to make a type specimen book.`,
+    content: `Nấu ăn là một nghệ thuật, thì người nấu ra những món này chắc chắn phải là một người nghệ sĩ. Phải nói thật là quá ngon, tôi chưa bao giờ thấy ai có thể tạo ra được hương vị như thế này`,
     desc: 'Nhà đánh giá ẩm thực đội 13',
   },
   {
@@ -44,7 +42,7 @@ function HomePage() {
 
   const resp = useMemo(
     () => ({
-      0: {
+      768: {
         spaceBetween: 12,
         slidesPerView: 1,
       },
@@ -90,7 +88,7 @@ function HomePage() {
           been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer
           took a galley of type and scrambled it to make a type specimen book.
         </p>
-        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-5 mt-4">
+        <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-4 lg:gap-[5%] mt-4">
           <div className="">
             <img src="https://anatolia.vn/wp-content/uploads/2024/04/doner.webp" alt="about us" />
           </div>
@@ -104,14 +102,14 @@ function HomePage() {
       </div>
 
       {/* Testimonial */}
-      <div className="bb_testimonial pl-0 lg:pl-20 xxl:pl-32 pt-20 flex flex-col gap-4 lg:gap-6 justify-between">
+      <div className="bb_testimonial pl-0 lg:pl-16 xxl:pl-24 xxxxl:pl-40 pt-20 flex flex-col gap-4 lg:gap-6 justify-between">
         <p className="text-lg lg:text-xl text-secondary text-center">Lời chứng thực</p>
         <h1 className="text-center">Mọi người đã nói gì</h1>
-        <div className="flex flex-col gap-6 lg:flex-row lg:gap-8 justify-center lg:justify-between items-center">
-          <div className="w-auto lg:max-w-[500px] xxl:max-w-[600px]">
+        <div className="flex flex-col gap-6 lg:flex-row lg:gap-8 justify-center lg:justify-between">
+          <div className="w-auto px-4 lg:px-0 lg:max-w-[500px] xxl:max-w-[600px] xxxl:max-w-[700px]">
             <Carousel data={dataItems} breakpoints={resp} navigation />
           </div>
-          <div className="px-4 lg:px-0">
+          <div className="px-4 lg:px-0 mx-auto">
             <img
               width="auto"
               src="https://anatolia.vn/wp-content/uploads/2024/04/coffee.webp"

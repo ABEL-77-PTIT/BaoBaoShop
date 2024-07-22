@@ -1,7 +1,8 @@
 import { useMemo } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Link } from '@remix-run/react'
-import { Autoplay } from 'swiper/modules'
+import { Autoplay, FreeMode } from 'swiper/modules'
+import 'swiper/css/free-mode'
 
 const TOP_BAR = [
   { title: 'Tiệm nước nhà Bảo Bảo' },
@@ -25,7 +26,9 @@ function TopBar() {
     <SwiperSlide key={index} className="flex justify-center items-center">
       <Link to="/contact-us">
         <div className="h-full flex justify-center items-center m-auto">
-          <h3 className="text-secondary flex flex-row flex-nowrap py-1">{item.title}</h3>
+          <p className="text-secondary flex flex-row flex-nowrap py-1 text-lg lg:text-xl">
+            {item.title}
+          </p>
         </div>
       </Link>
     </SwiperSlide>
@@ -34,7 +37,14 @@ function TopBar() {
   return (
     <div className="border-b border-third">
       <div className="container font-bold text-base py-1 lg:uppercase lg:text-sm lg:py-1.5">
-        <Swiper modules={[Autoplay]} navigation breakpoints={resp} autoplay={{ delay: 2000 }}>
+        <Swiper
+          modules={[Autoplay, FreeMode]}
+          navigation
+          loop={true}
+          freeMode={true}
+          breakpoints={resp}
+          autoplay={{ delay: 2000 }}
+        >
           {dataItems}
         </Swiper>
       </div>
