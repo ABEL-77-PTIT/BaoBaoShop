@@ -22,3 +22,4 @@ yarn.lock
 # config.*.ts
 config.development.ts
 config.production.ts
+.vercel
