@@ -12,6 +12,10 @@ const MENU: { title: string; url: string }[] = [
     url: '/menu',
   },
   {
+    title: 'Hình ảnh',
+    url: '/bb-images',
+  },
+  {
     title: 'Liên hệ',
     url: '/contact-us',
   },
